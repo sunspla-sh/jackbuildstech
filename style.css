@@ -296,6 +296,11 @@ html, body {
   color: var(--background-color);
 }
 
+#projects .project-card .project-card-image .project-card-link .project-card-youtube-icon {
+  height: 40px;
+  color: var(--background-color);
+}
+
 #projects .project-card .project-card-image .project-card-link .project-card-site-icon-container {
   height: 40px;
   width: 40px;
