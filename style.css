@@ -8,6 +8,7 @@
 html, body {
   margin: 0;
   font-family: "Nunito", sans-serif;
+  position: relative;
 }
 
 .navbar {
@@ -369,10 +370,16 @@ html, body {
 }
 
 #tech .tech-intro-container {
+  margin-top: 2rem;
   font-weight: bold;
   color: var(--secondary-text-color);
   font-size: 1.2rem;
   text-align: center;
+}
+
+#tech .tech-intro-container p:last-of-type {
+  margin-top: 3rem;
+  color: var(--tertiary-text-color);
 }
 
 #tech .tech-intro-container strong {
@@ -390,21 +397,26 @@ html, body {
 #tech .tech-icons-container img {
   height: 50px;
   margin: 1rem;
+  cursor: pointer;
 }
 
 .modal-background {
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
+  width: 100%;
   background-color: rgba(0,0,0,0.5);
   z-index: 10;
 }
 
 .modal-container {
-  position: absolute;
-  left: 10%;
-  height: 80vh;
+  position: fixed;
+  top: 10%;
+  left: 50%;
   width: 80%;
+  max-width: 600px;
+  transform: translateX(-50%);
   background-color: white;
   border-radius: 4px;
   padding: 1rem;
@@ -414,20 +426,46 @@ html, body {
   z-index: 11;
 }
 
-.modal-container img{
+.modal-container svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 30px;
+  color: var(--tertiary-text-color);
+}
+
+.modal-container svg:hover {
+  background-color: lightgray;
+}
+
+.modal-container img {
   align-self: center;
   height: 50px;
+  margin: 1rem 0 2rem 0;
 }
 
-.modal-container h3{
+.modal-container h3 {
   font-size: 2rem;
+  margin: 0 0 1rem 0;
+  text-align: center;
 }
 
-.modal-container p{
-  margin: 0;
+.modal-container p {
+  margin: 0 0 2rem 0;
   word-break: break-word;
   overflow-wrap: break-word;
   hyphens: auto;
+  font-weight: bold;
+  color: var(--tertiary-text-color);
+}
+
+.modal-container a {
+  color: white;
+  background-color: var(--background-color);
+  padding: 1rem 0;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
 }
 
 #experience {
@@ -700,6 +738,12 @@ hr.center-ball::before{
 
   #projects .project-card {
     width: 40%;
+  }
+
+  #tech .tech-intro-container {
+    max-width: 600px;
+    margin-left: auto;  
+    margin-right: auto;
   }
 }
 
