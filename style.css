@@ -357,6 +357,78 @@ html, body {
   margin: 1rem;
 }
 
+#tech {
+  margin: 0 1rem 0 1rem;
+}
+
+#tech h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  text-align: center;
+  color: var(--primary-text-color);
+}
+
+#tech .tech-intro-container {
+  font-weight: bold;
+  color: var(--secondary-text-color);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+#tech .tech-intro-container strong {
+  color: var(--background-color);
+  font-style: italic;
+}
+
+#tech .tech-icons-container {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+#tech .tech-icons-container img {
+  height: 50px;
+  margin: 1rem;
+}
+
+.modal-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+.modal-container {
+  position: absolute;
+  left: 10%;
+  height: 80vh;
+  width: 80%;
+  background-color: white;
+  border-radius: 4px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  z-index: 11;
+}
+
+.modal-container img{
+  align-self: center;
+  height: 50px;
+}
+
+.modal-container h3{
+  font-size: 2rem;
+}
+
+.modal-container p{
+  margin: 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
 
 #experience {
   margin: 0 1rem 0 1rem;
@@ -413,6 +485,7 @@ html, body {
   font-weight: bold;
   color: var(--secondary-text-color);
   font-size: 1.2rem;
+  overflow-wrap: anywhere;
 }
 
 #experience .experience-card .experience-card-list li {
