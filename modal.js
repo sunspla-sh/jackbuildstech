@@ -34,9 +34,3 @@ export const createModal = event => {
   });
 
 }
-
-
-
-export const scrollModalContainer = event => {
-
-};

@@ -125,35 +125,64 @@ html, body {
 }
 
 /* open menu effect */
-.menu-button-container .menu-button:active::before,
-.menu-button-container:focus .menu-button::before{
+.menu-button-container.active .menu-button::before{
   margin-top: 0px;
   transform: rotate(405deg);
 }
 /* open menu effect */
-.menu-button-container .menu-button:active,
-.menu-button-container:focus .menu-button {
+.menu-button-container.active .menu-button {
   background-color: transparent;
 }
 /* open menu effect */
-.menu-button-container .menu-button:active::after,
-.menu-button-container:focus .menu-button::after{
+.menu-button-container.active .menu-button::after{
   margin-top: 0px;
   transform: rotate(-405deg);
 }
 /* open menu effect */
-.menu-button-container ~ .dropdown:active,
-.menu-button-container:focus ~ .dropdown {
+.menu-button-container.active ~ .dropdown {
   visibility: visible;
   position: absolute;
   top: 100%;
   transform: translateX(-100%);
 }
 /* open menu effect */
-.menu-button-container ~ .menu-close:active,
-.menu-button-container:focus ~ .menu-close {
+.menu-button-container.active ~ .menu-close {
   display: inline;
 }
+
+/* THE FOLLOWING CSS MAKES A TOGGLEABLE DROPDOWN MENU WITHOUT JAVASCRIPT 
+BUT FAILS TO WORK ON iOS BECAUSE OF THE WAY :active AND :focus PSEUDOCLASSES ARE HANDLED */
+
+/* open menu effect */
+/* .menu-button-container .menu-button:active::before,
+.menu-button-container:focus .menu-button::before{
+  margin-top: 0px;
+  transform: rotate(405deg);
+} */
+/* open menu effect */
+/* .menu-button-container .menu-button:active,
+.menu-button-container:focus .menu-button {
+  background-color: transparent;
+} */
+/* open menu effect */
+/* .menu-button-container .menu-button:active::after,
+.menu-button-container:focus .menu-button::after{
+  margin-top: 0px;
+  transform: rotate(-405deg);
+} */
+/* open menu effect */
+/* .menu-button-container ~ .dropdown:active,
+.menu-button-container:focus ~ .dropdown {
+  visibility: visible;
+  position: absolute;
+  top: 100%;
+  transform: translateX(-100%);
+} */
+/* open menu effect */
+/* .menu-button-container ~ .menu-close:active,
+.menu-button-container:focus ~ .menu-close {
+  display: inline;
+} */
 
 /* ----- NAVBAR MOBILE END ----- */
 

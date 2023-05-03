@@ -19,3 +19,13 @@ for(let i = 0; i < projectCardTechIconsContainers.length; i++){
 
 }
 
+const menuButtonContainer = document.querySelector('.menu-button-container');
+menuButtonContainer.addEventListener('click', () => menuButtonContainer.classList.add('active'));
+const menuClose = document.querySelector('.menu-close');
+menuClose.addEventListener('click', () => menuButtonContainer.classList.remove('active'));
+
+const menuLinks = document.querySelectorAll('.dropdown a');
+for(let i = 0; i < menuLinks.length; i++){
+  menuLinks[i].addEventListener('click', () => menuButtonContainer.classList.remove('active'))
+}
+
