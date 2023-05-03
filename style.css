@@ -336,10 +336,6 @@ html, body {
   font-size: 1.2rem;
 }
 
-#projects .project-card .project-card-text .project-card-description b {
-  color: var(--primary-text-color);
-}
-
 #projects .project-card .project-card-text .project-card-tech {
   cursor: pointer;
   color: var(--secondary-text-color);
@@ -351,11 +347,18 @@ html, body {
   flex-flow: wrap;
   justify-content: center;
   padding-top: 2rem;
+  cursor: auto;
 }
 
 #projects .project-card .project-card-text .project-card-tech .project-card-tech-icons-container img {
   height: 50px;
   margin: 1rem;
+  cursor: pointer;
+}
+
+#projects .project-card .project-card-text .project-card-tech p {
+  color: var(--tertiary-text-color);
+  text-align: center;
 }
 
 #tech {
@@ -378,6 +381,7 @@ html, body {
 }
 
 #tech .tech-intro-container p:last-of-type {
+  font-size: 1.2rem;
   margin-top: 3rem;
   color: var(--tertiary-text-color);
 }
@@ -408,6 +412,7 @@ html, body {
   width: 100%;
   background-color: rgba(0,0,0,0.5);
   z-index: 10;
+  cursor: pointer;
 }
 
 .modal-container {
@@ -432,6 +437,7 @@ html, body {
   right: 0;
   height: 30px;
   color: var(--tertiary-text-color);
+  cursor: pointer;
 }
 
 .modal-container svg:hover {
@@ -484,6 +490,36 @@ html, body {
   border: 1px solid var(--background-color);
   border-radius: 4px;
   margin-top: 2rem;
+}
+
+#experience .experience-card .experience-card-image {
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding-bottom: 1rem;
+}
+
+#experience .experience-card .experience-card-image.one {
+  background-image: url("./assets/experience/ironhack-logo.png");
+  background-size: contain;
+}
+
+#experience .experience-card .experience-card-image.two {
+  background-image: url("./assets/experience/rocket-crash-explosion.gif");
+  background-size: contain;
+}
+
+#experience .experience-card .experience-card-image.three {
+  background-image: url("./assets/experience/mexico.svg");
+  background-size: contain;
+}
+
+#experience .experience-card .experience-card-image.four {
+  background-image: url("./assets/experience/carnival-cruise-line-logo.svg");
+  background-size: contain;
 }
 
 #experience .experience-card .experience-card-title {
@@ -744,6 +780,11 @@ hr.center-ball::before{
     max-width: 600px;
     margin-left: auto;  
     margin-right: auto;
+    font-size: 1.5em;
+  }
+  
+  #tech .tech-intro-container p:last-of-type {
+    font-size: 1.5rem;
   }
 }
 
