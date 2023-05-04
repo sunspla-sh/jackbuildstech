@@ -266,7 +266,6 @@ BUT FAILS TO WORK ON iOS BECAUSE OF THE WAY :active AND :focus PSEUDOCLASSES ARE
 
 #projects .project-card .project-card-image.one {
   background-image: url("./assets/projects/jobapptrack.png");
-  background-size: contain;
   background-color: var(--background-color);
 }
 
@@ -278,7 +277,6 @@ BUT FAILS TO WORK ON iOS BECAUSE OF THE WAY :active AND :focus PSEUDOCLASSES ARE
 
 #projects .project-card .project-card-image.three {
   background-image: url("./assets/projects/ipomg.png");
-  background-size: contain;
   background-color: var(--background-color);
 }
 
@@ -290,7 +288,7 @@ BUT FAILS TO WORK ON iOS BECAUSE OF THE WAY :active AND :focus PSEUDOCLASSES ARE
 
 #projects .project-card .project-card-image.five {
   background-image: url("./assets/projects/stierwebdev.png");
-  background-size: contain;
+  
   background-color: var(--background-color);
 }
 
