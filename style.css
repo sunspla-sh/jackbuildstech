@@ -248,6 +248,10 @@ BUT FAILS TO WORK ON iOS BECAUSE OF THE WAY :active AND :focus PSEUDOCLASSES ARE
   color: var(--primary-text-color);
 }
 
+#projects .resume-container {
+  width: 100%;
+}
+
 #projects .project-card {
   border: 1px solid var(--background-color);
   border-radius: 4px;
@@ -610,6 +614,11 @@ BUT FAILS TO WORK ON iOS BECAUSE OF THE WAY :active AND :focus PSEUDOCLASSES ARE
   padding: 0 2rem;
 }
 
+#education .education-card .education-card-image {
+  height: 200px;
+  margin-top: 2rem;
+}
+
 #education .education-card .education-card-title {
   font-size: 2rem;
   font-weight: 900;
@@ -638,6 +647,20 @@ BUT FAILS TO WORK ON iOS BECAUSE OF THE WAY :active AND :focus PSEUDOCLASSES ARE
   font-weight: 900;
   color: var(--tertiary-text-color);
   margin-top: 0.5rem;
+}
+
+#education .education-card .education-card-date.extra {
+  margin-bottom: 0.5rem;
+}
+
+#education .education-card .education-card-extra {
+  color: var(--tertiary-text-color);
+  margin: 0 auto 2rem auto;
+  max-width: 400px;
+}
+
+#education .education-card .education-card-extra a {
+  color: var(--tertiary-text-color);
 }
 
 #contact {
