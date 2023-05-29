@@ -29,3 +29,11 @@ for(let i = 0; i < menuLinks.length; i++){
   menuLinks[i].addEventListener('click', () => menuButtonContainer.classList.remove('active'))
 }
 
+const personalPhotoContainer = document.querySelector('#personal .personal-photo-container');
+setTimeout(() => {
+  personalPhotoContainer.classList.toggle('activated');
+}, 0);
+const intervalId = setInterval(() => {
+  personalPhotoContainer.classList.toggle('activated');
+}, 5000);
+window.addEventListener('unload', () => clearInterval(intervalId));

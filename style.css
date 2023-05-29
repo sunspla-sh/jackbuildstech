@@ -212,11 +212,44 @@ BUT FAILS TO WORK ON iOS BECAUSE OF THE WAY :active AND :focus PSEUDOCLASSES ARE
   margin: 0 1rem;
 }
 
-#personal .personal-photo-container .personal-photo {
+#personal .personal-photo-container {
+  perspective: 1000px;
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+}
+
+#personal .personal-photo-container .personal-photo-flipper {
+  transition: 2s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+#personal .personal-photo-container.activated .personal-photo-flipper {
+  transform: rotateY(180deg);
+}
+
+#personal .personal-photo-container .personal-photo-flipper .personal-photo {
   height: 180px;
   border-radius: 50%;
   border: 1px solid var(--background-color);
+  backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
+
+/* front photo, placed above back */
+#personal .personal-photo-container .personal-photo-flipper .personal-photo.front {
+	z-index: 1;
+	transform: rotateY(0deg);
+}
+
+/* back photo, initially hidden */
+#personal .personal-photo-container .personal-photo-flipper .personal-photo.back {
+	transform: rotateY(180deg);
+}
+
 
 #personal .personal-info .personal-text-container {
   text-align: center;
@@ -799,20 +832,32 @@ hr.center-ball::before{
 
   #personal .personal-info {
     flex-direction: row;
+    align-items: stretch;
   }
 
   #personal .personal-info .personal-photo-container {
-    flex: 1;
+    flex: 2;
+    height: auto;
+    width: auto;
   }
 
-  #personal .personal-info .personal-photo-container .personal-photo {
-    width: 100%;
+  #personal .personal-info .personal-photo-container .personal-photo-flipper {
     height: 100%;
-    margin-left: 4rem;
+    width: 100%;
+  }
+
+  #personal .personal-info .personal-photo-container .personal-photo-flipper .personal-photo {
+    height: 100%;
+    width: auto;
+  }
+
+  #personal .personal-info .personal-photo-container .personal-photo-flipper .personal-photo.front {
+    right: 0;
+    left: auto;
   }
 
   #personal .personal-info .personal-text-container {
-    flex: 2;
+    flex: 3;
   }
   
   #projects {
@@ -907,8 +952,16 @@ hr.center-ball::before{
     margin-right: auto;
   }
 
+  #personal .personal-info .personal-photo-container {
+    flex: 1;
+  }
+
   #personal .personal-info .personal-photo-container .personal-photo {
     margin-left: 0;
+  }
+
+  #personal .personal-info .personal-text-container {
+    flex: 2;
   }
   
   #personal .personal-info .personal-text-container .personal-name {
