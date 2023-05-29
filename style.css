@@ -234,6 +234,8 @@ BUT FAILS TO WORK ON iOS BECAUSE OF THE WAY :active AND :focus PSEUDOCLASSES ARE
   border-radius: 50%;
   border: 1px solid var(--background-color);
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
 	position: absolute;
 	top: 0;
 	left: 0;

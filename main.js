@@ -30,9 +30,11 @@ for(let i = 0; i < menuLinks.length; i++){
 }
 
 const personalPhotoContainer = document.querySelector('#personal .personal-photo-container');
+// initial flip immediately
 setTimeout(() => {
   personalPhotoContainer.classList.toggle('activated');
 }, 0);
+// repeated flips every 5 seconds
 const intervalId = setInterval(() => {
   personalPhotoContainer.classList.toggle('activated');
 }, 5000);
