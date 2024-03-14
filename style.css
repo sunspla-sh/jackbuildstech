@@ -569,17 +569,17 @@ BUT FAILS TO WORK ON iOS BECAUSE OF THE WAY :active AND :focus PSEUDOCLASSES ARE
 }
 
 #experience .experience-card .experience-card-image.one {
-  background-image: url("./assets/experience/ironhack-logo.png");
+  background-image: url("./assets/experience/siteimpact-logo.png");
   background-size: contain;
 }
 
 #experience .experience-card .experience-card-image.two {
-  background-image: url("./assets/experience/rocket-crash-explosion.gif");
+  background-image: url("./assets/experience/ironhack-logo.png");
   background-size: contain;
 }
 
 #experience .experience-card .experience-card-image.three {
-  background-image: url("./assets/experience/mexico.svg");
+  background-image: url("./assets/experience/rocket-crash-explosion.gif");
   background-size: contain;
 }
 
